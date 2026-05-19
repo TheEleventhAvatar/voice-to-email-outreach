@@ -1,4 +1,4 @@
-# Voice-to-LinkedIn Post Generator
+# Voice-to-Email-Outreach
 
 A powerful MCP (Model Context Protocol) tool that converts voice notes into professional LinkedIn posts using AI.
 
@@ -9,12 +9,10 @@ A powerful MCP (Model Context Protocol) tool that converts voice notes into prof
 - **Process**: ElevenLabs Speech-to-Text API transcribes the audio
 - **Output**: Raw text transcript
 
-### 🤖 AI → LinkedIn Post (OpenAI)
-- **Input**: Raw transcript from voice
-- **Process**: OpenAI GPT-4o-mini generates a professional LinkedIn post
+### 🤖 AgentMail 
+- **Input**: Raw transcript from voice -> extracts role and location -> matches with emails in csv file -> sends email to all ids using AgentMail
+- **Process**: OpenAI GPT-4o-mini generates a professional email
 - **Rules Applied**:
-  - Strong hook to grab attention
-  - Short paragraphs for readability
   - Professional tone
   - Slight storytelling elements
   - No emojis (clean business style)
@@ -65,27 +63,17 @@ npx tsx agent.ts
 
 ### Input
 - Audio file: `./Recording.m4a`
-- Voice content: "Hey everyone, I just finished building this amazing voice-to-LinkedIn tool..."
-
-### Output
-```json
-{
-  "transcript": "Hey everyone, I just finished building this amazing voice-to-LinkedIn tool...",
-  "linkedinPost": "🚀 Just shipped something I'm really excited about!\n\nI've been working on a voice-to-LinkedIn post generator that transforms spoken ideas into professional content. Here's what makes it special:\n\n🎤 Voice-to-text conversion using ElevenLabs API\n🤖 AI-powered content generation with OpenAI\n🔧 MCP protocol for seamless integration\n\nThe workflow is simple: speak your idea, get a polished LinkedIn post ready to publish. No more staring at blank screens wondering what to write!\n\nWhat's your biggest challenge with content creation? I'd love to hear your thoughts.\n\n#ContentCreation #AI #VoiceTech #LinkedIn #Productivity"
-}
-```
 
 ## 🔧 MCP Tool Details
 
 ### Tool Name
-`voiceToLinkedInPost`
+`voiceToEmail
 
 ### Parameters
 - `filePath` (string): Path to the audio file to transcribe
 
 ### Returns
 - `transcript`: Raw text from voice transcription
-- `linkedinPost`: AI-generated LinkedIn post content
 
 ## 📋 Dependencies
 
