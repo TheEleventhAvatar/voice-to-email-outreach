@@ -1,6 +1,7 @@
 # Voice-to-Email-Outreach
 
-A powerful MCP (Model Context Protocol) tool that converts voice notes into professional LinkedIn posts using AI.
+A tool that converts voice notes into extracted insights - mathces them with a csv,ans sends professional emails to relevant recuriters.
+hard coded as convex mcp(functionality soon)
 
 ## 🎯 How It Works
 
